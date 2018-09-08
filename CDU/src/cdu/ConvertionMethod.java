@@ -9,17 +9,9 @@ package cdu;
  *
  * @author ANGEL
  */
-public class CentToKelvin implements ConvertionMethod {
-
-     
-
-    @Override
-    public double method(double value) {
-      double kelvin=(value+273.15);
-      return kelvin;
-    }
-
+public interface ConvertionMethod {
     
     
+    public double method(double value);
     
 }

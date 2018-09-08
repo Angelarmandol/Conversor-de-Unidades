@@ -13,11 +13,9 @@ import java.util.logging.Logger;
  */
 public class ConversorJunit {
 
- 
-    /**
-     * @param args the command line arguments
-     */
-      
+    cdu.CentToKelvin ConvMethosArray = (new cdu.CentToKelvin(), new cdu.CentToKelvin());
+    Object[] ConvMethosArray =  (new CentsToFarenheit(), new CentToKelvin() );
+    
 
     public static void main(String[] args) { 
 
@@ -30,7 +28,7 @@ public class ConversorJunit {
            switch(desci()){
                case 1:
                    System.out.println("1.- Centigrados a Farenheit");
-            
+                  
                break;
                
                case 7:
@@ -53,7 +51,7 @@ public class ConversorJunit {
    
     public static int desci(){
              
-    BufferedReader tlc=new BufferedReader(new InputStreamReader(System.in)); 
+
             int decision=0;
             System.out.println("Seleccione una opcion:");
             System.out.println("1.- Centigrados a Farenheit");//
@@ -63,12 +61,8 @@ public class ConversorJunit {
             System.out.println("5.- Kelvin a Centigrados");
             System.out.println("6.- Kelvin a Farenheit");
             System.out.println("7.- Salir");
-       
-        try {
-            decision = Integer.parseInt(tlc.readLine());
-        } catch (IOException ex) {
-           System.out.println("Dato no valido");
-        }
+            
+           decision = (int) Read.valueRead();
         
         if (decision>7 || decision==0){
             System.err.println("fuera de rango");
@@ -78,22 +72,4 @@ public class ConversorJunit {
         return decision;
     }
 
-    
-    public static double dato(){
-        double a =0.0;
-        BufferedReader tlc=new BufferedReader(new InputStreamReader(System.in)); 
-        System.out.println("Ingresa dato a:");
-        try {
-             a = Double.parseDouble(tlc.readLine());
-        } catch (IOException ex) {
-            Logger.getLogger(ConversorJunit.class.getName()).log(Level.SEVERE, null, ex);
-        }
-   
-        return a;
-      
-    }
-    
-    
-     
-    
 }

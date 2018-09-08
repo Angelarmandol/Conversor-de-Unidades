@@ -9,14 +9,17 @@ package cdu;
  *
  * @author ANGEL
  */
-public class CentsToFarenheit {
-    
-    
-        
-    public float CentsToFar(float value){
-        float cent= (value*9/5)+32;
+public class CentsToFarenheit implements ConvertionMethod {
+
+     
+    @Override
+    public double method(double value) {
+        double cent= (value*9/5)+32;
         return cent;
-        //
     }
+    
+    
+  
+ 
     
 }
