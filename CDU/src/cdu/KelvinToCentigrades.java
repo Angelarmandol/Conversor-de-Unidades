@@ -9,12 +9,12 @@ package cdu;
  *
  * @author ANGEL
  */
-public class FarenheitToKelvin {
+public class KelvinToCentigrades {
     
-    public double FarToKelvin(double value){
-        double kelvin=((value-32)/1.8)+32;
-        return kelvin;
+    public double KelvinToCent (double value){
+      double cent= value-273.15;
+      return cent;
+      
     }
-    
     
 }
