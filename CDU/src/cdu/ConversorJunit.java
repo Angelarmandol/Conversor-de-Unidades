@@ -12,11 +12,12 @@ import java.util.logging.Logger;
  * @author ANGEL
  */
 public class ConversorJunit {
-
-    cdu.CentToKelvin ConvMethosArray = (new cdu.CentToKelvin(), new cdu.CentToKelvin());
-    Object[] ConvMethosArray =  (new CentsToFarenheit(), new CentToKelvin() );
+ 
     
-
+    Object[] ConvertMethods = {new CentToKelvin(),new CentsToFarenheit()};
+    
+    
+    
     public static void main(String[] args) { 
 
       boolean permanecer = true;
@@ -71,5 +72,7 @@ public class ConversorJunit {
         
         return decision;
     }
+
+   
 
 }

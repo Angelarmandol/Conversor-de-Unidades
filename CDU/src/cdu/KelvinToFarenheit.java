@@ -9,12 +9,9 @@ package cdu;
  *
  * @author ANGEL
  */
-public class KelvinToFarenheit {
-
-     
+public class KelvinToFarenheit implements ConvertionMethodInterface {
     
-    
-    public double KelvinToFarenheit (double value){
+    public double  method (double value){
        double farenheit =((value-273.15)*1.8)+32;
        return farenheit;
     }

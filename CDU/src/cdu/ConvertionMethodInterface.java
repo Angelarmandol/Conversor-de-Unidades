@@ -9,7 +9,7 @@ package cdu;
  *
  * @author ANGEL
  */
-public interface ConvertionMethod {
+public interface ConvertionMethodInterface {
     
     
     public double method(double value);

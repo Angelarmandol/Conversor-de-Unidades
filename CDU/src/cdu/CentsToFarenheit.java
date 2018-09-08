@@ -9,7 +9,7 @@ package cdu;
  *
  * @author ANGEL
  */
-public class CentsToFarenheit implements ConvertionMethod {
+public class CentsToFarenheit implements ConvertionMethodInterface {
 
      
     @Override

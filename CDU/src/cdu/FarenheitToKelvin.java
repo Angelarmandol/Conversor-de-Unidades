@@ -9,12 +9,12 @@ package cdu;
  *
  * @author ANGEL
  */
-public class FarenheitToKelvin {
+public class FarenheitToKelvin implements ConvertionMethodInterface {
     
-    public double FarToKelvin(double value){
+    @Override
+    public double method(double value) {
         double kelvin=((value-32)/1.8)+32;
         return kelvin;
     }
-    
-    
+      
 }

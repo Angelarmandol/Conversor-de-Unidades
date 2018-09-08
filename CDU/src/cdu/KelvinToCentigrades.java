@@ -9,9 +9,9 @@ package cdu;
  *
  * @author ANGEL
  */
-public class KelvinToCentigrades {
+public class KelvinToCentigrades implements ConvertionMethodInterface  {
     
-    public double KelvinToCent (double value){
+    public double method(double value){
       double cent= value-273.15;
       return cent;
       

@@ -9,7 +9,7 @@ package cdu;
  *
  * @author ANGEL
  */
-public class CentToKelvin implements ConvertionMethod {
+public class CentToKelvin implements ConvertionMethodInterface {
 
      
 
