@@ -11,4 +11,11 @@ package cdu;
  */
 public class CentToKelvin {
     
+    
+   public double CentToKelvin(double value){
+       double kelvin=(value+273.15);
+       return kelvin;
+   } 
+    
+    
 }

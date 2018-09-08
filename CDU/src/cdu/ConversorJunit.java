@@ -56,8 +56,8 @@ public class ConversorJunit {
     BufferedReader tlc=new BufferedReader(new InputStreamReader(System.in)); 
             int decision=0;
             System.out.println("Seleccione una opcion:");
-            System.out.println("1.- Centigrados a Farenheit");
-            System.out.println("2.- Centigrados a Kelvin");
+            System.out.println("1.- Centigrados a Farenheit");//
+            System.out.println("2.- Centigrados a Kelvin");//
             System.out.println("2.- Farenheit a Centigrados");//
             System.out.println("4.- Farenheit a Kelvin");
             System.out.println("5.- Kelvin a Centigrados");
