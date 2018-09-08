@@ -14,9 +14,16 @@ import java.util.logging.Logger;
 public class ConversorJunit {
  
     
-    Object[] ConvertMethods = {new CentToKelvin(),new CentsToFarenheit()};
+    static Object[] ConvertMethods = {
+        new CentToKelvin(), 
+        new CentsToFarenheit(), 
+        new FarenheitToCents(), 
+        new FarenheitToKelvin(), 
+        new KelvinToCentigrades(), 
+        new KelvinToFarenheit()
+    };
     
-    
+   
     
     public static void main(String[] args) { 
 
@@ -24,12 +31,15 @@ public class ConversorJunit {
   
         while (permanecer){
         
-       
-           
+        
            switch(desci()){
                case 1:
                    System.out.println("1.- Centigrados a Farenheit");
-                  
+                   System.out.println(ConvertMethods[1].getClass().toString());
+
+//CentToKelvin;    
+                   
+              
                break;
                
                case 7:
@@ -51,8 +61,7 @@ public class ConversorJunit {
     
    
     public static int desci(){
-             
-
+        
             int decision=0;
             System.out.println("Seleccione una opcion:");
             System.out.println("1.- Centigrados a Farenheit");//
@@ -62,15 +71,15 @@ public class ConversorJunit {
             System.out.println("5.- Kelvin a Centigrados");
             System.out.println("6.- Kelvin a Farenheit");
             System.out.println("7.- Salir");
-            
-           decision = (int) Read.valueRead();
+           
+               decision = (int) Read.valueRead();
         
-        if (decision>7 || decision==0){
-            System.err.println("fuera de rango");
-            decision=0;
-        }
+                if (decision>7 || decision==0){
+                    System.err.println("fuera de rango");
+                    decision=0;
+                }
         
-        return decision;
+    return decision;
     }
 
    
