@@ -9,14 +9,6 @@ package cdu;
  *
  * @author ANGEL
  */
-public class CentsToFarenheit {
-    
-    
-        
-    public float CentsToFar(float value){
-        float cent= (value*9/5)+32;
-        return cent;
-        //
-    }
+public class CentToKelvin {
     
 }
