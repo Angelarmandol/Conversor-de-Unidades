@@ -20,11 +20,11 @@ public class Read {
     public static double valueRead(){
         double a =0.0;
         BufferedReader tlc=new BufferedReader(new InputStreamReader(System.in)); 
-        System.out.println("Ingresa dato a:");
+        System.out.println("Ingresa dato :");
         try {
              a = Double.parseDouble(tlc.readLine());
         } catch (IOException ex) {
-            Logger.getLogger(ConversorJunit.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConversorMain.class.getName()).log(Level.SEVERE, null, ex);
         }
    
         return a;    

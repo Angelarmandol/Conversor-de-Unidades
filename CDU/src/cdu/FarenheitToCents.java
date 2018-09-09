@@ -6,13 +6,18 @@ package cdu;
  */
 public class FarenheitToCents implements ConvertionMethodInterface {
     
+ 
     @Override
     public double method(double value) {
-        System.out.println(value + " Centigrados a Kelvin: ");
         double farenheit=value*2-value/5;
         farenheit=farenheit+32;
         return farenheit;
         //
+    }
+
+    @Override
+    public String menu() {
+        return "Farenheit a Centigrados";
     }
     
 

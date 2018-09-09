@@ -11,11 +11,19 @@ package cdu;
  */
 public class KelvinToCentigrades implements ConvertionMethodInterface  {
     
+    
+   
+    
     public double method(double value){
-        System.out.println(value + " Centigrados a Kelvin");
+ 
       double cent= value-273.15;
       return cent;
       
+    }
+
+    @Override
+    public String menu() {
+      return "Kelvin a Centigrados";
     }
     
 }
