@@ -5,6 +5,7 @@
  */
 package cdu;
 
+import static cdu.ConversorMain.ConvertMethods;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,12 +38,24 @@ public class Read {
 
         return a;
     }
+
+    
     
     public static int valueReadMenu() {
         int a = 0;
-        BufferedReader tlc = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Ingresa dato :");
-        try {
+        
+        BufferedReader tlc = new BufferedReader(new InputStreamReader(System.in)); 
+        
+        System.out.println("Menu");
+        
+        for (int x=0; x < ConvertMethods.length; x++) {
+            System.out.println(x + 1 + ".-" + ConvertMethods[x].menu());
+        }
+        System.out.println((ConvertMethods.length + 1) + "-Salir");
+        
+       
+        try { 
+            System.out.println("Ingresa tu elección :");
             String text = tlc.readLine();
             text = text.trim();
             text = text.replaceAll(" ", "");
@@ -56,7 +69,11 @@ public class Read {
             System.err.println("Error de entrada de datos");
         }
 
+       
+        
+         
+
         return a;
-    }
+    }// fin de ReadMenu
 
 }

@@ -30,7 +30,7 @@ public class ConversorMain {
 
         while (permanecer) {
 
-            int eletion = desci();
+            int eletion = Read.valueReadMenu();
             if (eletion == ConvertMethods.length + 1) {
                 permanecer = false;
             } else if (eletion > ConvertMethods.length || eletion == 0) {
@@ -47,25 +47,7 @@ public class ConversorMain {
         System.out.println("Adiòs");
     }// fin main
 
-    public static int desci() {
-        
-        
-        System.out.println("Menu");
-        for (int x = 0; x < ConvertMethods.length; x++) {
-            System.out.println(x + 1 + ".-" + ConvertMethods[x].menu());
-        }
-        
-        
-        try {
-           System.out.println((ConvertMethods.length + 1) + "-Salir");
-         
-        } catch (Exception e) {
-            System.out.println("Dato no valido");
-   
-        }
-    return valueReadMenu(); 
-       
-    }
+  
     
     
 }
