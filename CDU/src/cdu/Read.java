@@ -17,19 +17,27 @@ import java.util.logging.Logger;
  */
 public class Read {
 
-    public static double valueRead(){
-        double a =0.0;
-        BufferedReader tlc=new BufferedReader(new InputStreamReader(System.in)); 
+    public static double valueRead() {
+        double a = 0.0;
+        BufferedReader tlc = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Ingresa dato :");
         try {
-             a = Double.parseDouble(tlc.readLine());
-        } catch (IOException ex) {
-            Logger.getLogger(ConversorMain.class.getName()).log(Level.SEVERE, null, ex);
+            String text = tlc.readLine();
+            text = text.trim();
+            System.out.println("Despues del trim: "+text);
+            text = text.replaceAll(" ", "");
+            a = Double.parseDouble(text);
+            
+            //Validations:
+            
+        } catch (java.lang.NumberFormatException e ) {
+            System.err.println("No es un numero");
         }
-   
-        return a;    
+        catch (IOException e) {
+            System.err.println("Error de entrada de datos");
+        }
+
+        return a;
     }
-    
-    
-       
+
 }
