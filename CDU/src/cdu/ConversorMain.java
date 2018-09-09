@@ -21,7 +21,8 @@ public class ConversorMain {
         new FarenheitToCents(),
         new FarenheitToKelvin(),
         new KelvinToCentigrades(),
-        new KelvinToFarenheit()
+        new KelvinToFarenheit(),
+    
     };
 
     public static void main(String[] args) {
@@ -29,25 +30,22 @@ public class ConversorMain {
         boolean permanecer = true;
 
         while (permanecer) {
-
             int eletion = Read.valueReadMenu();
+
             if (eletion == ConvertMethods.length + 1) {
                 permanecer = false;
             } else if (eletion > ConvertMethods.length || eletion == 0) {
                 System.out.println("Eleccion no valida");
-                eletion = 0;
             } else {
                 double value = Read.valueRead();
-                    if(value>0)
-                        System.out.println("\n" + value + " " + ConvertMethods[eletion - 1].menu() + ": " + ConvertMethods[eletion - 1].method(value) + "\n");
+                if (value > 0) {
+                    System.out.println("\n" + value + " " + ConvertMethods[eletion - 1].menu() + ": " + ConvertMethods[eletion - 1].method(value) + "\n");
+                }
 
             }
 
-        }// fin while
-        System.out.println("Adiòs");
-    }// fin main
+        }// end while
+        System.out.println("Adiós");
+    }// end main
 
-  
-    
-    
 }
