@@ -24,16 +24,35 @@ public class Read {
         try {
             String text = tlc.readLine();
             text = text.trim();
-            System.out.println("Despues del trim: "+text);
             text = text.replaceAll(" ", "");
+            text = text.replaceAll(",", ".");
             a = Double.parseDouble(text);
-            
+
             //Validations:
-            
-        } catch (java.lang.NumberFormatException e ) {
+        } catch (java.lang.NumberFormatException e) {
             System.err.println("No es un numero");
+        } catch (IOException e) {
+            System.err.println("Error de entrada de datos");
         }
-        catch (IOException e) {
+
+        return a;
+    }
+    
+    public static int valueReadMenu() {
+        int a = 0;
+        BufferedReader tlc = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Ingresa dato :");
+        try {
+            String text = tlc.readLine();
+            text = text.trim();
+            text = text.replaceAll(" ", "");
+            text = text.replaceAll(",", ".");
+            a = Integer.parseInt(text);
+
+            //Validations:
+        } catch (java.lang.NumberFormatException e) {
+            System.err.println("No es un numero");
+        } catch (IOException e) {
             System.err.println("Error de entrada de datos");
         }
 

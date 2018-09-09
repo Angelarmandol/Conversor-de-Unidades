@@ -1,5 +1,6 @@
 package cdu;
 
+import static cdu.Read.valueReadMenu;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,7 +38,8 @@ public class ConversorMain {
                 eletion = 0;
             } else {
                 double value = Read.valueRead();
-                System.out.println("\n" + value + " " + ConvertMethods[eletion - 1].menu() + ": " + ConvertMethods[eletion - 1].method(value) + "\n");
+                    if(value>0)
+                        System.out.println("\n" + value + " " + ConvertMethods[eletion - 1].menu() + ": " + ConvertMethods[eletion - 1].method(value) + "\n");
 
             }
 
@@ -58,10 +60,10 @@ public class ConversorMain {
            System.out.println((ConvertMethods.length + 1) + "-Salir");
          
         } catch (Exception e) {
-            System.out.println("DAto no valido");
+            System.out.println("Dato no valido");
    
         }
-    return (int) Read.valueRead(); 
+    return valueReadMenu(); 
        
     }
     
